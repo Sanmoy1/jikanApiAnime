@@ -66,41 +66,21 @@ The app follows Clean Architecture principles with three main layers:
 ```
 app/
 ├── data/
-│   ├── api/          # API interfaces and services
-│   ├── model/        # Data models
-│   ├── repository/   # Repository implementations
-│   └── source/       # Data sources (API, Paging)
+│   ├── api/           # Retrofit API interfaces and response models
+│   ├── model/         # Data models
+│   └── repository/    # Repository implementation
+├── di/                # Dependency injection modules
 ├── domain/
-│   ├── repository/   # Repository interfaces
-│   └── model/        # Domain models
-└── ui/
-    ├── components/   # Reusable UI components
-    ├── screens/      # Main screens
-    └── theme/        # App theme and styling
+│   ├── model/         # Domain models
+│   └── repository/    # Repository interfaces
+├── ui/
+│   ├── screens/       # Compose screens
+│   │   ├── home/      # Anime list screen
+│   │   └── detail/    # Anime detail screen
+│   ├── components/    # Reusable compose components
+│   ├── navigation/    # Navigation setup
+│   └── theme/         # Existing theme package
+└── util/              # Utility classes
 ```
 
-## 🚀 Getting Started
 
-1. Clone the repository
-2. Open the project in Android Studio
-3. Run the app on an emulator or physical device
-
-## 🎯 Future Improvements
-
-- Search functionality
-- Favorite anime list
-- Offline support with local caching
-- User reviews and ratings
-- Seasonal anime section
-
-## 📱 Screenshots
-
-[Screenshots will be added here]
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
