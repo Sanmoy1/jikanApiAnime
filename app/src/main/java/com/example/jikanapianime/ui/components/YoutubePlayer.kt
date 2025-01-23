@@ -8,11 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 
-/**
- * A composable that displays a YouTube video using WebView
- * @param embedUrl The YouTube embed URL
- * @param modifier Modifier for the video player
- */
+// Composable that displays a YouTube video using WebView with embedUrl and a modifier for customization
+
 @Composable
 fun YoutubePlayer(
     embedUrl: String,

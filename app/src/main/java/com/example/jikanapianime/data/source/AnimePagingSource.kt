@@ -7,10 +7,8 @@ import com.example.jikanapianime.data.model.AnimeData
 import retrofit2.HttpException
 import java.io.IOException
 
-/**
- * PagingSource implementation for loading paginated anime data from the Jikan API
- * @property api The Jikan API interface for making network requests
- */
+// PagingSource implementation for loading paginated anime data from the Jikan API using the provided API interface
+
 class AnimePagingSource(
     private val api: JikanApi
 ) : PagingSource<Int, AnimeData>() {

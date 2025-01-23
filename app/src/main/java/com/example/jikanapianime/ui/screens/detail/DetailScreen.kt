@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -22,12 +23,8 @@ import com.example.jikanapianime.ui.components.ErrorMessage
 import com.example.jikanapianime.ui.components.LoadingIndicator
 import com.example.jikanapianime.ui.components.YoutubePlayer
 
-/**
- * Detail screen that displays detailed information about an anime
- * @param viewModel ViewModel for the detail screen
- * @param animeId ID of the anime to display
- * @param onBackClick Callback when back button is clicked
- */
+// Detail screen displaying anime details, using viewModel for data, animeId to identify the anime, and onBackClick callback for back navigation
+
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalGlideComposeApi::class)
 @Composable
 fun DetailScreen(
@@ -45,10 +42,10 @@ fun DetailScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(uiState.anime?.title ?: "Anime Details") },
+                title = { Text("Anime Details") },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.Default.ArrowBack, "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back")
                     }
                 }
             )
@@ -74,10 +71,8 @@ fun DetailScreen(
     }
 }
 
-/**
- * Component that displays the detailed information of an anime
- * @param anime The anime data to display
- */
+// Component displaying detailed information of an anime, using anime data as input
+
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 private fun AnimeDetails(anime: AnimeData) {

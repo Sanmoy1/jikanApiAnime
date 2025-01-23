@@ -19,11 +19,8 @@ import com.example.jikanapianime.ui.components.AnimeListItem
 import com.example.jikanapianime.ui.components.ErrorMessage
 import com.example.jikanapianime.ui.components.LoadingIndicator
 
-/**
- * Home screen that displays a paginated list of anime
- * @param viewModel ViewModel for the home screen
- * @param onAnimeClick Callback when an anime item is clicked
- */
+// Home screen displaying a paginated list of anime, using viewModel for data and onAnimeClick callback for item clicks
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(

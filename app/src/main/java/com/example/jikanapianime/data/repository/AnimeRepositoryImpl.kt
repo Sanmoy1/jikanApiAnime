@@ -9,10 +9,8 @@ import com.example.jikanapianime.data.source.AnimePagingSource
 import com.example.jikanapianime.domain.repository.AnimeRepository
 import kotlinx.coroutines.flow.Flow
 
-/**
- * Implementation of [AnimeRepository] that fetches data from the Jikan API
- * @property api The Jikan API interface for making network requests
- */
+// Implementation of AnimeRepository that fetches data from the Jikan API using the provided API interface
+
 class AnimeRepositoryImpl(
     private val api: JikanApi
 ) : AnimeRepository {

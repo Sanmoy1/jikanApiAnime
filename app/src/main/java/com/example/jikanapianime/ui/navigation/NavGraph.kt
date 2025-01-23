@@ -14,9 +14,9 @@ import com.example.jikanapianime.ui.screens.detail.DetailViewModel
 import com.example.jikanapianime.ui.screens.home.HomeScreen
 import com.example.jikanapianime.ui.screens.home.HomeViewModel
 
-/**
- * Navigation destinations used in the app
- */
+
+// Navigation destinations used in the app
+
 object Destinations {
     const val HOME = "home"
     const val DETAIL = "detail/{animeId}"
@@ -24,9 +24,9 @@ object Destinations {
     fun createDetailRoute(animeId: Int) = "detail/$animeId"
 }
 
-/**
- * Main navigation graph of the app
- */
+
+ //Main navigation graph of the app
+
 @Composable
 fun NavGraph() {
     val navController = rememberNavController()

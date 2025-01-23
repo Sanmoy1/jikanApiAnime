@@ -9,28 +9,25 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-/**
- * ViewModel for the detail screen that displays anime details
- * @property repository Repository to fetch anime data
- */
+// ViewModel for the detail screen managing anime details, using repository to fetch data
 class DetailViewModel(
     private val repository: AnimeRepository
 ) : ViewModel() {
 
+    // StateFlow managing the UI state of the detail screen
     private val _uiState = MutableStateFlow(DetailScreenState())
     val uiState: StateFlow<DetailScreenState> = _uiState.asStateFlow()
 
-    /**
-     * Loads detailed information about a specific anime
-     * @param animeId The unique identifier of the anime
-     */
+    // Loads detailed information about a specific anime using its ID
     fun loadAnimeDetails(animeId: Int) {
         viewModelScope.launch {
+            // Update state to loading before fetching data
             _uiState.update { it.copy(isLoading = true, error = null) }
-            
+
             repository.getAnimeDetails(animeId)
                 .onSuccess { animeData ->
-                    _uiState.update { 
+                    // Update state with fetched anime data on success
+                    _uiState.update {
                         it.copy(
                             isLoading = false,
                             anime = animeData,
@@ -39,6 +36,7 @@ class DetailViewModel(
                     }
                 }
                 .onFailure { exception ->
+                    // Update state with error message on failure
                     _uiState.update {
                         it.copy(
                             isLoading = false,
@@ -49,3 +47,4 @@ class DetailViewModel(
         }
     }
 }
+

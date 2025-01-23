@@ -30,18 +30,3 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    androidx.compose.material3.Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Composable
-@Preview(showBackground = true)
-fun GreetingPreview() {
-    JikanAPIAnimeTheme {
-        Greeting("Android")
-    }
-}

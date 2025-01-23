@@ -9,15 +9,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-/**
- * Object responsible for providing network-related dependencies
- */
+// Object responsible for providing network-related dependencies
 object NetworkModule {
-    /**
-     * Creates and returns an instance of JikanApi
-     * Configures Retrofit with necessary settings and interceptors
-     */
-    fun provideJikanApi(): JikanApi {
+    // Creates and returns an instance of JikanApi with Retrofit and OkHttp configuration
+    private fun provideJikanApi(): JikanApi {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
@@ -37,11 +32,9 @@ object NetworkModule {
             .create(JikanApi::class.java)
     }
 
-    /**
-     * Provides an instance of AnimeRepository
-     * Uses the JikanApi instance for network operations
-     */
+    // Provides an instance of AnimeRepository using the JikanApi for network operations
     fun provideAnimeRepository(): AnimeRepository {
         return AnimeRepositoryImpl(provideJikanApi())
     }
 }
+

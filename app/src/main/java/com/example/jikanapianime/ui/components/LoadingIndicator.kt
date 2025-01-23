@@ -7,9 +7,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
-/**
- * A centered loading indicator component
- */
+
+//A centered loading indicator component
+
 @Composable
 fun LoadingIndicator() {
     Box(

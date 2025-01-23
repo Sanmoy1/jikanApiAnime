@@ -10,10 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
-/**
- * A centered error message component
- * @param message The error message to display
- */
+
+//A centered error message component
+
 @Composable
 fun ErrorMessage(message: String) {
     Box(

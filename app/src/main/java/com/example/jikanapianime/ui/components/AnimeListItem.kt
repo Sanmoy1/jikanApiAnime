@@ -15,11 +15,8 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.example.jikanapianime.data.model.AnimeData
 
-/**
- * A card component displaying basic anime information
- * @param anime The anime data to display
- * @param onClick Callback when the card is clicked
- */
+// Card component displaying basic anime information, using anime data and onClick callback for interactions
+
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun AnimeListItem(

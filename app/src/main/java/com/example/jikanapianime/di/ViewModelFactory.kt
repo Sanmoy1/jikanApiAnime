@@ -6,10 +6,8 @@ import com.example.jikanapianime.domain.repository.AnimeRepository
 import com.example.jikanapianime.ui.screens.detail.DetailViewModel
 import com.example.jikanapianime.ui.screens.home.HomeViewModel
 
-/**
- * Factory for creating ViewModels with dependencies
- * @property repository Repository instance to be injected into ViewModels
- */
+// Factory for creating ViewModels with repository dependency injection
+
 class ViewModelFactory(
     private val repository: AnimeRepository
 ) : ViewModelProvider.Factory {
@@ -28,9 +26,9 @@ class ViewModelFactory(
     }
 
     companion object {
-        /**
-         * Creates an instance of ViewModelFactory
-         */
+
+//        Creates an instance of ViewModelFactory
+
         fun create(): ViewModelFactory {
             val repository = NetworkModule.provideAnimeRepository()
             return ViewModelFactory(repository)
