@@ -61,7 +61,7 @@ A modern Android application that showcases anime information using the Jikan AP
 
 ## 🏗️ Architecture Overview
 
-The app follows Clean Architecture principles with three main layers:
+The app follows Clean Architecture principles:
 
 ```
 app/
